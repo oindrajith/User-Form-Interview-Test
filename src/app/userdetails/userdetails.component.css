@@ -1,0 +1,10 @@
+p > span{
+    color: green;
+}
+.details{
+    min-height: 67vh;
+}
+.userdetails{
+    font-size: 25px;
+    padding-bottom: 30px;
+}

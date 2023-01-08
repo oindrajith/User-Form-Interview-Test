@@ -1,0 +1,19 @@
+<div class="country text-center">
+    <h3>Country Data get from LocalStorage</h3>
+    <div class="row countrydata">
+        <div class="col-4">
+            <h3>Name</h3>
+            <button class="btn btn-info">"{{data.country}}"</button>
+        </div>
+        <div class="col-4">
+            <h3>Flag</h3>
+            <img src="{{data.flag}}" alt="flag" width="100px" />
+        </div>
+        <div class="col-4">
+            <h3>Location</h3>
+            <button class="btn btn-primary Location">
+                <a target="_blank" href="{{data.map}}">View Location --></a>
+            </button>
+        </div>
+    </div>
+</div>

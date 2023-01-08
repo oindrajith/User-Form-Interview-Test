@@ -1,0 +1,16 @@
+.country{
+    height: 63vh;
+    margin-top: 30px;
+}
+h3{
+   margin-bottom: 30px;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+.countrydata{
+    border: 2px solid #c3c3c3;
+    padding: 10px;
+}

@@ -1,0 +1,30 @@
+.ullist,
+.fnav {
+    display: flex;
+    justify-content: space-around;
+}
+
+.ullist li {
+    list-style-type: none;
+}
+
+.ullist li i {
+    font-size: 20px;
+}
+
+.col-md-6 {
+    margin-bottom: 10px;
+}
+
+.fnav a:hover,
+ul > li > i:hover {
+    cursor: pointer;
+    scale: 1.05;
+}
+
+footer {
+    background-color: rgb(226, 226, 226);
+    padding-top: 20px;
+    margin-top: 10px;
+    border-top: 2px solid #f5f5f5;
+}

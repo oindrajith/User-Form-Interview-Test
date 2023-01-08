@@ -1,0 +1,52 @@
+
+
+<form class="row g-3" (submit)="getData(f)" #f="ngForm">
+
+    <div class="col-md-6">
+      <label for="fname" class="form-label">First Name :</label>
+      <input type="text" class="form-control" id="fname" name="firstname" autocomplete="off" required minlength="3" #fname="ngModel" ngModel>
+      <p  class="alert alert-danger" *ngIf="fname.touched && fname.errors">Enter minimum 3 Characters</p>
+    </div>
+
+    <div class="col-md-6">
+      <label for="lname" class="form-label">last Name :</label>
+      <input type="text" class="form-control" id="lname" name="lastname" autocomplete="off" required minlength="1" #lname="ngModel" ngModel>
+      <p class="alert alert-danger" *ngIf="lname.touched && lname.errors">Enter minimum 1 Characters</p>
+    </div>
+
+    <div class="col-12">
+      <label for="mobileno" class="form-label">Mobile No :</label>
+      <input type="tel" class="form-control" id="mobileno" name="mobileno" pattern="^\s*(?:\+?(\d{1,3}))?[-. (]*(\d{3})[-. )]*(\d{3})[-. ]*(\d{4})(?: *x(\d+))?\s*$" minlength="10" maxlength="10" autocomplete="off" required #number="ngModel"  ngModel>
+      <p class="alert alert-danger" *ngIf="number.touched && number.errors">Enter 10 Digit mobile Number</p>
+    </div>
+
+    <div class="col-md-4">
+        <label for="inputState" class="form-label">Continents :</label>
+        <select id="inputState" class="form-select" name='continent' (change)="continentChange(continentSelect)" #continentSelect required ngModel>
+          <option selected>Choose...</option>
+          <option *ngFor="let x of continentsList">{{x}}</option>
+        </select>
+    </div>
+
+    <div class="col-md-4">
+      <label for="inputState" class="form-label">Country :</label>
+      <select id="inputState" class="form-select" name="country" (change)="countryChange(countrySelect)" #countrySelect required ngModel >
+        <option selected>Choose...</option>
+        <option *ngFor="let x of country">{{x.name.common}}</option>
+       </select>
+    </div>
+
+    <div class="col-md-4">
+        <label for="inputState" class="form-label">State :</label>
+        <select id="inputState" class="form-select"name="state" (change)="stateChange(stateSelect)" #stateSelect ngModel>
+          <option selected>Choose...</option>
+          <option *ngFor="let x of state">{{x.name}}</option>
+        </select>
+    </div>
+
+    <div class="col-12 text-center">
+      <input type="submit" class="btn btn-primary" [disabled]="f.invalid"/>
+    </div>
+
+  </form>
+
