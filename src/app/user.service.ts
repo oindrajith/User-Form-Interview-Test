@@ -18,8 +18,8 @@ export class UserService {
   }
 
   allData() {
-    this.http.get('../../assets/countries+states.json').subscribe(d => this.countriesStates = d);
-    // this.http.get('assets/countries+states.json').subscribe(d => this.countriesStates = d);
+    // this.http.get('../../assets/countries+states.json').subscribe(d => this.countriesStates = d);
+    this.http.get('assets/countries+states.json').subscribe(d => this.countriesStates = d);
     return this.http.get('https://restcountries.com/v3.1/all');
   }
 }
